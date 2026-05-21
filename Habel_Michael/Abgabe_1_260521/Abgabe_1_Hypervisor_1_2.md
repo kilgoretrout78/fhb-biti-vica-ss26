@@ -43,13 +43,13 @@ Es gibt zwei grundlegende Typen, die sich in ihrer **Architektur** und ihrem **E
 Ein **Type-1-Hypervisor** läuft direkt auf der physischen Hardware des Host-Systems, ohne dass ein klassisches Host-Betriebssystem darunter liegt. Er ist selbst das "Betriebssystem" der Maschine und hat **direkten Zugriff auf die Hardware-Ressourcen**.
 
 ```
-+---------------------------+
-|  VM 1   |  VM 2   |  VM 3  |  ← Gastbetriebssysteme
-+---------------------------+
-|      Type-1-Hypervisor    |  ← Direkt auf Hardware
-+---------------------------+
-|       Hardware (CPU, RAM, Storage, NIC)  |
-+---------------------------+
++------------------------------------------+
+|          VM 1   |  VM 2   |  VM 3        |  ← Gastbetriebssysteme
++------------------------------------------+
+|             Type-1-Hypervisor            |  ← Direkt auf Hardware
++------------------------------------------+
+|     Hardware (CPU, RAM, Storage, NIC)    |
++------------------------------------------+
 ```
 
 **Eigenschaften:**
@@ -74,15 +74,15 @@ Ein **Type-1-Hypervisor** läuft direkt auf der physischen Hardware des Host-Sys
 Ein **Type-2-Hypervisor** wird als gewöhnliche Anwendung auf einem bestehenden **Host-Betriebssystem** (z. B. Windows, macOS oder Linux) installiert und betrieben. Er nutzt die Betriebssystem-Dienste des Hosts als Vermittler für den Hardware-Zugriff.
 
 ```
-+---------------------------+
++----------------------------+
 |  VM 1   |  VM 2   |  VM 3  |  ← Gastbetriebssysteme
-+---------------------------+
-|    Type-2-Hypervisor      |  ← Läuft als Anwendung
-+---------------------------+
-|    Host-Betriebssystem    |  ← z. B. Windows 11, macOS
-+---------------------------+
-|       Hardware            |
-+---------------------------+
++----------------------------+
+|    Type-2-Hypervisor       |  ← Läuft als Anwendung
++----------------------------+
+|    Host-Betriebssystem     |  ← z. B. Windows 11, macOS
++----------------------------+
+|       Hardware             |
++----------------------------+
 ```
 
 **Eigenschaften:**
